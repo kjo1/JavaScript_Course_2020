@@ -1,6 +1,6 @@
 /********************
  * Variables and data types
- *   
+ *
  */
 
 /*
@@ -35,9 +35,10 @@ var if = 23; // can't be used
 
 /********************
  * Variables mutation and type coercion
- *   
+ *
  */
 
+/*
 var firstName = 'John'
 var age = 21;
 
@@ -49,14 +50,49 @@ job = 'teacher';
 isMarried = false;
 
 console.log(firstName + ' is a ' + age + ' year old '
-    + job + '. Is he married? ' + isMarried);
+   + job + '. Is he married? ' + isMarried);
 
 // Variable mutation
 age = 'twenty one';
 job = 'drive';
 
 alert(firstName + ' is a ' + age + ' year old '
-    + job + '. Is he married? ' + isMarried);
+   + job + '. Is he married? ' + isMarried);
 
 var lastName = prompt('What is his last Name?');
 console.log(firstName + ' ' + lastName);
+*/
+
+
+/************************************
+ * Basic operators
+ */
+var year, yearJohn, yearMark;
+now = 2020;
+ageJohn = 29;
+ageMark = 33;
+
+// Math operators
+yearJohn = now - ageJohn;
+yearMark = now - ageMark;
+
+console.log(yearJohn);
+
+console.log(now + 2);
+console.log(now * 2);
+console.log(now / 10);
+
+// Logical operators
+var johnOlder = ageJohn > ageMark;
+console.log(johnOlder);
+
+var johnOlder = ageJohn < ageMark;
+console.log(johnOlder);
+
+
+// typeof operators
+console.log(typeof johnOlder);
+console.log(typeof ageJohn);
+console.log(typeof 'Mark is older than John');
+var x;
+console.log(typeof x);
