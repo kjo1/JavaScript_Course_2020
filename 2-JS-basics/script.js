@@ -102,7 +102,7 @@ console.log(typeof x);
 /************************************
  * Basic precedence
  */
-
+/*
 var now = 2018;
 var yearJohn = 1989;
 var fullAge = 18;
@@ -153,12 +153,42 @@ var bmiResult = bmiJohn > bmiMark;
 var result = 'Is John\'s BMI higher than Mark\'s?';
 
 console.log(result + ' ' + bmiResult);
+*/
 
 
 
 
+/*******************************
+ * If / else statements
+ */
 
+var firstName = 'John';
+var civilStatus = 'single';
 
+if (civilStatus === 'married') {
+   console.log(firstName + ' is married!');
+} else {
+   console.log(firstName + ' will hopefully marry soon :)');
+}
 
+var isMarried = true;
+if (isMarried) {
+   console.log(firstName + ' is married!');
+} else {
+   console.log(firstName + ' will hopefully marry soon :)');
+}
 
+var heightJohn = 1.65;
+var heightMark = 1.72;
 
+var weightJohn = 60;
+var weightMark = 80;
+
+var bmiJohn = weightJohn / (heightJohn * heightJohn);
+var bmiMark = weightMark / (heightMark * heightMark);
+
+if (bmiMark > bmiJohn) {
+   console.log('Mark\'s BMI is higher than John\'s.');
+} else {
+   console.log('John\'s BMI is higher than Mark\'s.');
+}
