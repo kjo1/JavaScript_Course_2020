@@ -133,3 +133,32 @@ x++; //x = x + 1; //x += 1;
 console.log(x);
 x--;
 console.log(x);
+
+
+// BMI Calculator
+var heightJohn = 1.65;
+var heightMark = 1.72;
+
+weightJohn = 60;
+weightMark = 70;
+
+var bmiJohn = weightJohn / (heightJohn * heightJohn);
+var bmiMark = weightMark / (heightMark * heightMark);
+
+// console.log(bmiJohn);
+// console.log(bmiMark);
+console.log(bmiMark, bmiJohn);
+
+var bmiResult = bmiJohn > bmiMark;
+var result = 'Is John\'s BMI higher than Mark\'s?';
+
+console.log(result + ' ' + bmiResult);
+
+
+
+
+
+
+
+
+
