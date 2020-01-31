@@ -292,7 +292,7 @@ if (height == '23') { // === Strict equality operator
 /*******************************
  * CODING CHALLENGE 2
  */
-
+/*
 var teamJohn, teamMike, teamMary;
 var teamJohn = 'John\'s Team';
 var teamMike = 'Mike\'s Team';
@@ -303,14 +303,15 @@ var avgScoreJohn = (89 + 120 + 153) / 3
 var avgScoreMike = (116 + 94 + 123) / 3
 var avgScoreMary = (97 + 134 + 105) / 3
 console.log(avgScoreJohn, avgScoreMike, avgScoreMary)
-
-// 2. Win or Lose
+*/
+// 2. Win or Lose (two teams)
 /*
 avgScoreJohn > avgScoreMike ? console.log(teamJohn + ' wins the average score is ' + avgScoreJohn)
    : console.log(teamMike + ' wins the average score is ' + avgScoreMike);
    */
 
 // including draw
+/*
 if (avgScoreJohn > avgScoreMike && avgScoreJohn > avgScoreMary) {
    console.log(teamJohn + ' wins, the average score is ' + avgScoreJohn)
 }
@@ -326,4 +327,34 @@ else if (avgScoreJohn === avgScoreMike && avgScoreJohn === avgScoreMary) {
 else {
    console.log('There is a draw')
 }
+*/
 
+/*******************************
+ * Functions
+ */
+
+function caculateAge(birthYear) {
+   return 2018 - birthYear;
+}
+
+var ageKang = caculateAge(1994);
+var ageMike = caculateAge(1949);
+var ageJane = caculateAge(1977);
+console.log(ageKang, ageMike, ageJane);
+
+function yearsUntilRetirement(year, firstName) {
+   var age = caculateAge(year);
+   var retirement = 65 - age;
+
+   if (retirement > 0) {
+      console.log(firstName + ' retires in ' + retirement + ' years.');
+   }
+   else {
+      console.log(firstName + ' is already retired.');
+   }
+
+}
+
+yearsUntilRetirement(1994, 'Kang');
+yearsUntilRetirement(1949, 'Mike');
+yearsUntilRetirement(1977, 'Jane');
