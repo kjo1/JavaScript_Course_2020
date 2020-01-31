@@ -273,7 +273,7 @@ switch (true) {
 
 // falsy values: undefined, null, 0, '', NaN
 // truthy values: NOT falsy values
-
+/*
 var height;
 height = 23;
 
@@ -286,4 +286,44 @@ if (height || height === 0) {
 // Equality operators
 if (height == '23') { // === Strict equality operator
    console.log(' The == operator does type coercion!');
-} 
+}
+*/
+
+/*******************************
+ * CODING CHALLENGE 2
+ */
+
+var teamJohn, teamMike, teamMary;
+var teamJohn = 'John\'s Team';
+var teamMike = 'Mike\'s Team';
+var teamMary = 'Mary\'s Team';
+
+// 1.
+var avgScoreJohn = (89 + 120 + 153) / 3
+var avgScoreMike = (116 + 94 + 123) / 3
+var avgScoreMary = (97 + 134 + 105) / 3
+console.log(avgScoreJohn, avgScoreMike, avgScoreMary)
+
+// 2. Win or Lose
+/*
+avgScoreJohn > avgScoreMike ? console.log(teamJohn + ' wins the average score is ' + avgScoreJohn)
+   : console.log(teamMike + ' wins the average score is ' + avgScoreMike);
+   */
+
+// including draw
+if (avgScoreJohn > avgScoreMike && avgScoreJohn > avgScoreMary) {
+   console.log(teamJohn + ' wins, the average score is ' + avgScoreJohn)
+}
+else if (avgScoreMike > avgScoreJohn && avgScoreMike > avgScoreMary) {
+   console.log(teamMike + ' wins, the average score is ' + avgScoreMike)
+}
+else if (avgScoreMary > avgScoreJohn && avgScoreMary > avgScoreMike) {
+   console.log(teamMary + ' wins, the average score is ' + avgScoreMary)
+}
+else if (avgScoreJohn === avgScoreMike && avgScoreJohn === avgScoreMary) {
+   console.log('All teams did great on the same average score of ' + avgScoreJohn);
+}
+else {
+   console.log('There is a draw')
+}
+
