@@ -453,16 +453,17 @@ console.log(tips, totalBills);
  * Objects and properties
  */
 
+/*
 // Object literal
 var kang = {
-   firstName: 'Kang',
-   lastName: 'Smith',
-   birthYear: 1994,
-   faimly: ['Jane', 'Mark', 'Bob', 'Emily'],
-   job: 'teacher',
-   isMarried: false
+  firstName: 'Kang',
+  lastName: 'Smith',
+  birthYear: 1994,
+  faimly: ['Jane', 'Mark', 'Bob', 'Emily'],
+  job: 'teacher',
+  isMarried: false
 };
-
+7
 console.log(kang.firstName);
 console.log(kang['lastName']);
 var x = 'birthYear';
@@ -478,10 +479,30 @@ jane.firstName = 'Jane';
 jane.birthYear = '1963';
 jane['lastName'] = 'Smith';
 console.log(jane);
+*/
 
+/*******************************
+ * Objects and methods
+ */
 
+var kang = {
+   firstName: 'Kang',
+   lastName: 'Smith',
+   birthYear: 1994,
+   faimly: ['Jane', 'Mark', 'Bob', 'Emily'],
+   job: 'teacher',
+   isMarried: false,
+   calcAge: function (birthYear) {
+      this.age = 2020 - this.birthYear;
+   }
+};
 
+//console.log(kang.calcAge());
 
+//var age = kang.calcAge();
+
+kang.calcAge();
+console.log(kang);
 
 
 
