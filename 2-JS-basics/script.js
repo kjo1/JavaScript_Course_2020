@@ -484,7 +484,7 @@ console.log(jane);
 /*******************************
  * Objects and methods
  */
-
+/*
 var kang = {
    firstName: 'Kang',
    lastName: 'Smith',
@@ -503,6 +503,52 @@ var kang = {
 
 kang.calcAge();
 console.log(kang);
+*/
+
+/*******************************
+ * CODING CHALLENGE 4
+ */
+
+var kang = {
+   firstName: 'Kang',
+   lastName: 'Jo',
+   weight: 68,
+   height: 1.72,
+   calcBMI: function (weight, height) {
+      this.BMI = this.weight / (this.height * this.height)
+      return this.BMI;
+   }
+};
+
+var mark = {
+   firstName: 'Mark',
+   lastName: 'Smith',
+   weight: 68,
+   height: 1.73,
+   calcBMI: function (weight, height) {
+      this.BMI = this.weight / (this.height * this.height)
+      return this.BMI;
+   }
+};
+
+//var kangBMI = kang.BMI;
+//var markBMI = mark.BMI;
+// kang.calcBMI();
+// mark.calcBMI();
+
+if (kang.calcBMI() > mark.calcBMI()) {
+   console.log(kang.firstName + ' ' + kang.lastName + ' has a higher BMI'
+      + '(' + kang.BMI + ')' + ' than ' + mark.firstName + ' ' + mark.lastName
+      + '(' + mark.BMI + ')')
+}
+else if (mark.BMI > kang.BMI) {
+   console.log(mark.firstName + ' ' + mark.lastName + ' has a higher BMI'
+      + '(' + mark.BMI + ')' + ' than ' + kang.firstName + ' ' + kang.lastName
+      + '(' + kang.BMI + ')')
+}
+else {
+   console.log('Both have the exact same BMI of ' + kang.BMI);
+}
 
 
 
