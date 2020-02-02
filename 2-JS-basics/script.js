@@ -426,6 +426,7 @@ console.log(isTeacher);
 /*******************************
  * CODING CHALLENGE 3
  */
+/*
 var bills = [124, 48, 268];
 
 function tipCalculator(amount) {
@@ -446,6 +447,39 @@ var tips = [tipCalculator(bills[0]), tipCalculator(bills[1]), tipCalculator(bill
 
 var totalBills = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(tips, totalBills);
+*/
+
+/*******************************
+ * Objects and properties
+ */
+
+// Object literal
+var kang = {
+   firstName: 'Kang',
+   lastName: 'Smith',
+   birthYear: 1994,
+   faimly: ['Jane', 'Mark', 'Bob', 'Emily'],
+   job: 'teacher',
+   isMarried: false
+};
+
+console.log(kang.firstName);
+console.log(kang['lastName']);
+var x = 'birthYear';
+console.log(kang[x]);
+
+kang.job = 'developer';
+kang['isMarried'] = true;
+console.log(kang);
+
+// new Object syntax
+var jane = new Object();
+jane.firstName = 'Jane';
+jane.birthYear = '1963';
+jane['lastName'] = 'Smith';
+console.log(jane);
+
+
 
 
 
