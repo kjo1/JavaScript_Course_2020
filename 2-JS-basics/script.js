@@ -392,6 +392,7 @@ console.log(whatDoYouDo('retired', 'Mark'));
  */
 
 // Initialize new array
+/*
 var names = ['Kang', 'Mark', 'Jane'];
 var years = new Array(1994, 1949, 1977);
 
@@ -420,9 +421,31 @@ console.log(kang.indexOf(1994));
 
 var isTeacher = kang.indexOf('teacher') === -1 ? 'Kang is NOT a teacher' : 'Kang IS a teacher';
 console.log(isTeacher);
+*/
 
+/*******************************
+ * CODING CHALLENGE 3
+ */
+var bills = [124, 48, 268];
 
+function tipCalculator(amount) {
 
+   if (amount < 50) {
+      percent = 0.2;
+   }
+   else if (amount <= 200) {
+      percent = 0.15;
+   }
+   else {
+      percent = 0.1;
+   }
+   return amount * percent;
+}
+
+var tips = [tipCalculator(bills[0]), tipCalculator(bills[1]), tipCalculator(bills[2])];
+
+var totalBills = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+console.log(tips, totalBills);
 
 
 
