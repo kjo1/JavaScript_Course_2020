@@ -367,6 +367,7 @@ yearsUntilRetirement(1977, 'Jane');
 //function whatDoYouDo(job, firstName){}
 
 // Function expression
+/*
 var whatDoYouDo = function (job, firstName) {
    switch (job) {
       case 'teacher':
@@ -384,3 +385,60 @@ console.log(whatDoYouDo('teacher', 'Kang'));
 console.log(whatDoYouDo('desinger', 'Jane'));
 console.log(whatDoYouDo('driver', 'Mike'));
 console.log(whatDoYouDo('retired', 'Mark'));
+*/
+
+/*******************************
+ * Arrays
+ */
+
+// Initialize new array
+var names = ['Kang', 'Mark', 'Jane'];
+var years = new Array(1994, 1949, 1977);
+
+console.log(names);
+console.log(names[0]);
+console.log(names.length);
+
+// Mutate array data
+names[1] = 'Ben';
+names[names.length] = 'Mary';
+console.log(names);
+
+// Different data types
+var kang = ['Kang', 'Smith', 1994, 'developer', false];
+
+kang.push('blue');
+kang.unshift('Mr.');
+console.log(kang);
+
+kang.pop();
+kang.pop();
+kang.shift();
+console.log(kang);
+
+console.log(kang.indexOf(1994));
+
+var isTeacher = kang.indexOf('teacher') === -1 ? 'Kang is NOT a teacher' : 'Kang IS a teacher';
+console.log(isTeacher);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
