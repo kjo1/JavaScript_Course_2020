@@ -508,7 +508,7 @@ console.log(kang);
 /*******************************
  * CODING CHALLENGE 4
  */
-
+/*
 var kang = {
    firstName: 'Kang',
    lastName: 'Jo',
@@ -549,18 +549,55 @@ else if (mark.BMI > kang.BMI) {
 else {
    console.log('Both have the exact same BMI of ' + kang.BMI);
 }
+*/
+
+/*******************************
+ * Loops and iteration
+ */
+
+// for loop
+/*
+for (var i = 0; i < 10; i++) {
+   console.log(i);
+}
+*/
+/*
+for (var i = 1; i <= 20; i += 2) {
+   console.log(i);
+}
+
+var kang = ['Kang', 'Smith', 1994, 'developer', false, 'green'];
+
+for (var i = 0; i < kang.length; i++) {
+   console.log(kang[i]);
+}
+
+// while loop
+var i = 0;
+while (i < kang.length) {
+   console.log(kang[i]);
+   i++;
+}
+*/
+
+// continue and break statements
+var kang = ['Kang', 'Smith', 1994, 'developer', false, 'green'];
+
+for (var i = 0; i < kang.length; i++) {
+   if (typeof kang[i] !== 'string') continue;
+   console.log(kang[i]);
+}
 
 
+for (var i = 0; i < kang.length; i++) {
+   if (typeof kang[i] !== 'string') break;
+   console.log(kang[i]);
+}
 
-
-
-
-
-
-
-
-
-
+// Lopping backwards
+for (var i = kang.length - 1; i >= 0; i--) {
+   console.log(kang[i]);
+}
 
 
 
