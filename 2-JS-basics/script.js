@@ -579,7 +579,7 @@ while (i < kang.length) {
    i++;
 }
 */
-
+/*
 // continue and break statements
 var kang = ['Kang', 'Smith', 1994, 'developer', false, 'green'];
 
@@ -598,8 +598,114 @@ for (var i = 0; i < kang.length; i++) {
 for (var i = kang.length - 1; i >= 0; i--) {
    console.log(kang[i]);
 }
+*/
 
+/*******************************
+ * CODING CHALLENGE 5
+ */
 
+var john = {
+   firstName: 'John',
+   bills: [124, 48, 268, 180, 42],
+   calcTips: function () {
+      this.tips = [];
+      this.totalAmount = [];
 
+      for (i = 0; i < this.bills.length; i++) {
+         var percent;
+         var bill = this.bills[i];
 
+         if (bill < 50) {
+            percent = 0.2;
+         }
+         else if (bill <= 200) {
+            percent = 0.15;
+         }
+         else {
+            percent = 0.1;
+         }
+         this.tips[i] = bill * percent
+         this.totalAmount[i] = bill + bill * percent;
+      }
+   }
+}
 
+var mark = {
+   firstName: 'Mark',
+   bills: [77, 375, 110, 45],
+   calcTips: function () {
+      this.tips = [];
+      this.totalAmount = [];
+
+      for (i = 0; i < this.bills.length; i++) {
+         var percent;
+         var bill = this.bills[i];
+
+         if (bill < 100) {
+            percent = 0.2;
+         }
+         else if (bill <= 300) {
+            percent = 0.1;
+         }
+         else {
+            percent = 0.25;
+         }
+         this.tips[i] = bill * percent
+         this.totalAmount[i] = bill + bill * percent;
+      }
+   }
+}
+
+function averageTip(tips) {
+   var sum = 0;
+
+   for (i = 0; i < tips.length; i++) {
+      sum += tips[i];
+   }
+   return sum / tips.length;
+}
+
+john.calcTips();
+mark.calcTips();
+
+john.average = averageTip(john.tips)
+mark.average = averageTip(mark.tips)
+console.log(john, mark);
+
+john.average > mark.average ? console.log(john.firstName + ' paid more tips than ' + mark.firstName
+   + ' with an average of $' + john.average)
+   : console.log(mark.firstName + ' paid more tips than ' + john.firstName
+      + ' with an average of $' + mark.average);
+
+/*
+var billsMark = [77, 375, 110, 180, 45];
+
+tipCalculator(billsMark);
+//billsMark.push(tips, totalBills);
+
+function tipCalculator(amount) {
+   var tips = [];
+   var totalBills = [];
+   var averageTip;
+
+   for (i = 0; i < amount.length; i++) {
+      if (amount[i] < 100) {
+         percent = 0.2;
+      }
+      else if (amount[i] <= 300) {
+         percent = 0.1;
+      }
+      else {
+         percent = 0.25;
+      }
+      tip = amount[i] * percent
+      total = tip + amount[i];
+
+      tips.push(tip);
+      totalBills.push(total);
+      //return tips, totalBills;
+   }
+   console.log('Tips paid: ' + tips, 'Total paid: ' + totalBills);
+   return tips, totalBills;
+};
+*/
