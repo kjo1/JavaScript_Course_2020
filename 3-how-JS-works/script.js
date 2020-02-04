@@ -33,8 +33,7 @@ console.log(age); // 23
 
 ///////////////////////////////////////
 // Lecture: Scoping
-
-
+/*
 // First scoping example
 
 
@@ -72,13 +71,44 @@ function third() {
     console.log(a + b + c + d); // not working - b is not defined as well as c
     // only a and d can be accessed
 }
-
+*/
 
 ///////////////////////////////////////
 // Lecture: The this keyword
 
+//console.log(this);
+/*
+calculateAge(1984);
 
+function calculateAge(year) {
+    console.log(2020 - year);
+    console.log(this);// still the window object(global object)
+}
+*/
+var kang = {
+    firstName: "Kang",
+    yearOfBirth: 1994,
+    calculateAge: function () {
+        console.log(this);
+        console.log(2020 - this.yearOfBirth);
+        /*
+        function innerFunction() {
+            console.log(this);// still the window object(global object)
+        }
+        innerFunction();
+        */
+    }
+}
 
+kang.calculateAge();
+
+var mike = {
+    firstName: 'Mike',
+    yearOfBirth: 1984
+};
+
+mike.calculateAge = kang.calculateAge;
+mike.calculateAge();
 
 
 
