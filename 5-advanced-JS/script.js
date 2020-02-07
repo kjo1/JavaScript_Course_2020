@@ -1,5 +1,5 @@
 // Function constructor
-
+/*
 var kang = {
     name: 'Kang',
     yearOfBirth: 1994,
@@ -29,3 +29,39 @@ mark.calculateAge();
 console.log(kang.lastName);
 console.log(jane.lastName);
 console.log(mark.lastName);
+*/
+
+
+
+// Object.create
+var personProto = {
+    calculateAge: function () {
+        console.log(2020 - this.yearOfBirth);
+    }
+};
+
+var kang = Object.create(personProto);
+kang.name = 'Kang';
+kang.yearOfBirth = 1994;
+kang.job = 'developer';
+
+var jane = Object.create(personProto,
+    {
+        name: { value: 'Jane' },
+        yearOfBirth: { value: 1979 },
+        job: { value: 'designer' }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
