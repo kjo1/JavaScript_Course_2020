@@ -172,7 +172,7 @@ function game() {
 }
 game();
 */
-
+/*
 (function () {
     var score = Math.random() * 10;
     console.log(score >= 5);
@@ -184,6 +184,49 @@ game();
     var score = Math.random() * 10;
     console.log(score >= 5 - goodLuck);
 })(5);
+*/
+
+
+// Closures
+
+function retirement(retirementAge) {
+    var a = ' years left until retirement.';
+    return function (yearOfBirth) {
+        var age = 2020 - yearOfBirth;
+        console.log((retirementAge - age) + a);
+    }
+}
+
+var retirementUS = retirement(66);
+var retirementGermany = retirement(65);
+var retirementIceland = retirement(67);
+
+retirementGermany(1994);
+retirementUS(1994);
+retirementIceland(1994);
+
+//retirement(66)(1994);
+
+function interviewQuestion(jobTitle) {
+    return function (name) {
+        if (jobTitle === 'designer') {
+            console.log(name + ', can you please explain what UX design is?');
+        }
+        else if (jobTitle === 'teacher') {
+            console.log('What subject do you teach, ' + name + '?');
+        }
+        else {
+            console.log('Hello ' + name + ', what do you do?');
+        }
+    }
+}
+
+interviewQuestion('teacher')('John');
+
+
+
+
+
 
 
 
